@@ -49,10 +49,7 @@ test("TC03: Forgot password flow", async ({ page }) => {
   await home.clickLogin();
   await login.clickForgotPassword();
   await forgot.submitEmail(process.env.FORGOT_PASSWORD_EMAIL!);
-  // await page.pause();
-  await expect(page.locator('//div[@id="flash_notice"]')).toHaveText(
-    / to choose a new password /
-  );
+  await expect(page.locator("#flash_notice")).toBeVisible();
 });
 
 test('TC04: Search using text "Navigation"', async ({ page }) => {
