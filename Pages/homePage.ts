@@ -5,7 +5,7 @@ export class HomePage {
   constructor(private page: Page) {}
 
   async goto() {
-    await this.page.goto(process.env.BASE_URL!);
+    await this.page.goto("https://www.redmine.org");
   }
 
   async clickRegister() {
