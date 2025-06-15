@@ -2,11 +2,10 @@ name: Run Playwright Tests and Publish Allure Report
 
 on:
   push:
-    branches: [main]
+    branches: [master, main]
   pull_request:
-  
-  workflow_dispatch:
 
+  workflow_dispatch:
 
 jobs:
   test:
