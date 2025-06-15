@@ -60,7 +60,7 @@ test('TC04: Search using text "Navigation"', async ({ page }) => {
   await home.goto();
   await home.search("Navigation");
   await search.filterByNews();
-  await expect(page.locator("h3", { hasText: "wrong text" })).toBeVisible();
+  await expect(page.locator("h3", { hasText: "Results" })).toBeVisible();
 });
 
 test("TC05: Navigate to Ruby Installer for Windows", async ({ page }) => {
