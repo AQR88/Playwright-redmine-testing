@@ -49,10 +49,9 @@ test("TC03: Forgot password flow", async ({ page }) => {
   await home.clickLogin();
   await login.clickForgotPassword();
   await forgot.submitEmail(process.env.FORGOT_PASSWORD_EMAIL!);
-  await page.pause();
+  // await page.pause();
   await expect(page.locator("#flash_notice")).toHaveText(
-    /instructions to choose a new password /,
-    { timeout: 10000 }
+    /instructions to choose a new password /
   );
 });
 
