@@ -5,6 +5,6 @@ export class ForgotPasswordPage {
 
   async submitEmail(email: string) {
     await this.page.fill("#mail", email);
-    await this.page.click("input[name=commit]");
+    await this.page.locator("input[name=commit]").click();
   }
 }
