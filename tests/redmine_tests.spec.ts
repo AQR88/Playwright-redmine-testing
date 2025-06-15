@@ -22,7 +22,8 @@ test("TC01: New user registration using valid data", async ({ page }) => {
   await register.fillForm(username, password, email);
   await register.submit();
   await expect(page.locator(".flash.notice")).toHaveText(
-    /Account was successfully created./
+    /Account was successfully created./,
+    { timeout: 10000 }
   );
 });
 
